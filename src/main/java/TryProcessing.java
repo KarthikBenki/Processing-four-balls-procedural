@@ -34,10 +34,14 @@ public class TryProcessing extends PApplet {
 
     private void drawCircle() {
         for (int i = 1; i <= ball_x.length; i++) {
-            ellipse(ball_x[i-1], VERTICAL_BALL_POS *i, DIAMETER, DIAMETER);
+            getBalls(i);
         }
         getBallSpeed();
 
+    }
+
+    private void getBalls(int i) {
+        ellipse(ball_x[i -1], VERTICAL_BALL_POS * i, DIAMETER, DIAMETER);
     }
 
     private void getBallSpeed() {
