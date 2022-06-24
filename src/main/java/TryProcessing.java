@@ -22,10 +22,6 @@ public class TryProcessing extends PApplet {
     }
 
     @Override
-    public void setup() {//initializes
-    }
-
-    @Override
     public void draw() {//updation
         drawCircle();
 
