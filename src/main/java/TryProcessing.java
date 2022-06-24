@@ -5,6 +5,7 @@ public class TryProcessing extends PApplet {
 
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
+    public static final int VERTICAL_BALL_POS = HEIGHT / 5;
     public static final int DIAMETER = 10;
     private int[] ball_x= new int[4];
 
@@ -32,10 +33,9 @@ public class TryProcessing extends PApplet {
     }
 
     private void drawCircle() {
-        ellipse(ball_x[0], HEIGHT/5, DIAMETER, DIAMETER);
-        ellipse( ball_x[1], HEIGHT/5*2, DIAMETER, DIAMETER);
-        ellipse(ball_x[2], HEIGHT/5*3, DIAMETER, DIAMETER);
-        ellipse(ball_x[3], HEIGHT/5*4, DIAMETER, DIAMETER);
+        for (int i = 1; i <= ball_x.length; i++) {
+            ellipse(ball_x[i-1], VERTICAL_BALL_POS *i, DIAMETER, DIAMETER);
+        }
         getBallSpeed();
 
     }
