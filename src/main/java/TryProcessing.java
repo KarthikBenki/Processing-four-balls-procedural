@@ -27,7 +27,6 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {//updation
-//        paintWhite();
         drawCircle();
 
     }
@@ -37,7 +36,6 @@ public class TryProcessing extends PApplet {
             getBalls(i);
         }
         getBallSpeed();
-
     }
 
     private void getBalls(int i) {
@@ -51,7 +49,4 @@ public class TryProcessing extends PApplet {
         ball_x[3]+=4;
     }
 
-    private void paintWhite() {
-        background(255);
-    }
 }
